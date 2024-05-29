@@ -8,7 +8,7 @@ describe("myFunction", () => {
   it("returns the word 'false' if I pass in a number less than 5", () => {
     expect(myFunction(1)).toBe("false");
   });
-  it("returns the word 'big' if I pass in a numbewr greater than 5", () => {
+  it("returns the word 'big' if I pass in a number greater than 5", () => {
     expect(myFunction(100)).toBe("big");
   });
   it("returns the word 'negative' if a negative number is passed in", () => {
@@ -33,7 +33,7 @@ describe('Testing Block Buster', () => {
     expect(blockBuster("Movie Four")).toBe("Lilo and Stitch"); 
   });
   it("should return the movie set for movie five", () => {
-    expect(blockBuster("Movie Five")).toBe("Ex Machina"); 
+    expect(blockBuster("Movie Five")).toBe("Ever After"); 
   }); 
   it("should return the default", () => {
     expect(blockBuster("Fast X")).toBe("I'm sorry we do not carry Fast X"); 

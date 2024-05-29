@@ -7,10 +7,22 @@ const driver = new Builder().withCapabilities(Capabilities.chrome()).build();
 
 class Employees {
   // Write a class that holds the name, phone, and title for the employee.
+  name: string;
+  phone: number;
+  title: string;
+
+  constructor(name: string, phone: number, title: string) {
+    this.name = name;
+    this.phone = phone;
+    this.title = title;
 }; 
 
 let employees: Array<Employees> = [
   //Create an array of four employees using your class. 
+  new Employees('Leo', 808-234-9831, 'yellow'),
+  new Employees('Rafael', 808-234-9832, 'red'),
+  new Employees('Donatello', 808-234-9833, 'purple'),
+  new Employees('Michaelangelo', 808-234-9834, 'orange'),
 ]
 
 const addEmployee: By = By.//fill in the blank
