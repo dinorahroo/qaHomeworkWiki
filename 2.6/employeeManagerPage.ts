@@ -7,7 +7,7 @@ const driver: WebDriver = new Builder().withCapabilities(Capabilities.chrome()).
 
 const page = new SpecPage(driver, "https://devmountain-qa.github.io/employee-manager/1.2_Version/index.html");
 
-class employeeManager
+class employeeManagergit 
 
 test("it works", async () => {
     await page.navigate();
