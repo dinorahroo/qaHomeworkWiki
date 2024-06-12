@@ -4,8 +4,6 @@
 
 import { Builder, By, Capabilities, until, WebDriver, WebElement, Key,} from "selenium-webdriver";
 
-const chromedriver = require("chromedriver");
-
 const driver: WebDriver = new Builder().withCapabilities(Capabilities.chrome()).build();
 
 const bernice: By = By.name('employee1');
@@ -18,8 +16,8 @@ const titleInput: By = By.name('titleEntry')
 const saveButton: By = By.id('saveBtn');
 const cancelButton: By = By.name('cancel');
 const errorCard: By = By.css('.errorCard');
-describe("Employee Manager 1.2", () => {
 
+describe("Employee Manager 1.2", () => {
     beforeEach(async () => {
         await driver.get(
         "https://devmountain-qa.github.io/employee-manager/1.2_Version/index.html"
@@ -40,14 +38,14 @@ describe("Employee Manager 1.2", () => {
         */
         await driver.findElement(bernice).click();
         await driver.wait(
-            until.elementIsVisible(await driver.findElement(nameDisplay))
+            until.elementIsVisible(await driver.findElement(nameInput))
         );
         await driver.findElement(nameInput).clear();
         await driver.findElement(nameInput).sendKeys("Test Name");
         await driver.findElement(phillip).click();
         await driver.wait(
             until.elementTextContains(
-            await driver.findElement(nameInput),
+            await driver.findElement(nameDisplay),
             "Phillip"
             )
         );
@@ -73,7 +71,7 @@ describe("Employee Manager 1.2", () => {
             */
             await driver.findElement(phillip).click();
             await driver.wait(
-                until.elementIsVisible(await driver.findElement(nameDisplay))
+                until.elementIsVisible(await driver.findElement(nameInput))
             );
             await driver.findElement(nameInput).clear();
             await driver.findElement(nameInput).sendKeys("Test Name");
@@ -103,7 +101,7 @@ describe("Employee Manager 1.2", () => {
             await driver.findElement(phillip).click();
             await driver.wait(
                 until.elementTextContains(
-                await driver.findElement(nameInput),
+                await driver.findElement(nameDisplay),
                 "Phillip"
                 )
             );
@@ -147,7 +145,7 @@ describe("Employee Manager 1.2", () => {
             */
             await driver.findElement(bernice).click();
             await driver.wait(
-                until.elementIsVisible(await driver.findElement(nameDisplay))
+                until.elementIsVisible(await driver.findElement(nameInput))
             );
             await driver.findElement(nameInput).clear();
             await driver.findElement(nameInput).sendKeys(Key.SPACE, Key.BACK_SPACE);
