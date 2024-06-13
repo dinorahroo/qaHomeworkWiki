@@ -28,6 +28,7 @@ export class employeeManager {
         await this.driver.wait(until.elementLocated(elementBy))
         return (await this.driver.findElement(elementBy)).click()
     };
+    
     async setInput(elementBy: By, keys: any) {
         await this.driver.wait(until.elementLocated(elementBy)).clear()
         return this.driver.findElement(elementBy).sendKeys(keys)

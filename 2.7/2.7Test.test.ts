@@ -27,13 +27,17 @@ let addInterns = async (newInterns) => {
    await page.click(page.addEm);
    await page.click(page.newEm);
    await page.setInput(page.nameInp, newInterns.name);
+   await page.setInput(page.phoInp, newInterns.phone);
+   await page.setInput(page.titleInp, newInterns.title);
+   await page.click(page.saveBtn);
+   await page.driver.sleep(2000);
 };
 
 test('can add the bake off crew',async () => {
-    await two.navigate(); 
-    await two.getElement(two.addEm); 
+    await page.navigate(); 
+    await page.getElement(page.addEm); 
     for(let i= 0; i < newInterns.length; i ++){
         await addInterns(newInterns[i]); 
     }; 
-    await two.driver.quit(); 
+    await page.driver.quit(); 
 })
