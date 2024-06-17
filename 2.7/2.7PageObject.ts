@@ -2,7 +2,7 @@ import { BasePage } from "./basePage";
 import {By} from 'selenium-webdriver'; 
 
 export class pageObject extends BasePage {
-    addEm: By = By.name('addEMployee'); 
+    addEm: By = By.name('addEmployee'); 
     newEm: By = By.xpath('//li[text()="New Employee"]');
     nameInp: By = By.name('nameEntry');
     phoInp: By = By.name('phoneEntry');

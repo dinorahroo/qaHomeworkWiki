@@ -16,10 +16,10 @@ class Intern {
 
 let newInterns: Array<Intern> = [
    //create an array of Interns using your class 
-   new Intern('Noel', 888888888, 'Host'),
-   new Intern('Prue', 999999999, 'Judge'),
-   new Intern('Matt', 777777777, 'Host'),
-   new Intern('Paul', 444444444, 'Handshake Master')
+   new Intern('Noel', 8888888888, 'Host'),
+   new Intern('Prue', 9999999999, 'Judge'),
+   new Intern('Matt', 7777777777, 'Host'),
+   new Intern('Paul', 4444444444, 'Handshake Master')
 ];
 
 let addInterns = async (newInterns) => {

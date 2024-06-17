@@ -20,7 +20,7 @@ class Employees {
 
 let employees: Array<Employees> = [
   //Create an array of four employees using your class. 
-  new Employees('Leo', 808-234-9831, 'yellow'),
+  new Employees('Leo', 8082349831, 'yellow'),
   new Employees('Rafael', 808-234-9832, 'red'),
   new Employees('Donatello', 808-234-9833, 'purple'),
   new Employees('Michaelangelo', 808-234-9834, 'orange'),
@@ -31,7 +31,7 @@ const newEmployee: By = By.xpath(`//li[text() = 'New Employee']`);
 const nameInput: By = By.name('nameEntry');
 const phoneInput: By = By.name('phoneEntry');
 const titleInput: By = By.name('titleEntry');
-const saveBtn: By = By.id('#saveBtn');
+const saveBtn: By = By.id('saveBtn');
 
 let myFunc = async (employees) => {
    await driver.findElement(addEmployee).click();
@@ -43,7 +43,7 @@ let myFunc = async (employees) => {
    await driver.findElement(titleInput).clear();
    await driver.findElement(titleInput).sendKeys(employees.title);
    await driver.findElement(saveBtn).click();
-
+};
 
 describe("should add employees to employee manager", () => {
     test("can add employees using myFunc", async () => {
@@ -51,7 +51,7 @@ describe("should add employees to employee manager", () => {
         for(let i = 0; i < employees.length; i++) {
             await myFunc(employees[i]); 
         }; 
-        await driver.sleep(3000); 
+        await driver.sleep(5000); 
         await driver.quit(); 
     });
-}):
+});
